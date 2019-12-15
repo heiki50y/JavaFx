@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="300.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="ch.makery.address.view.PersonOverviewController">
+  <children>
+    <SplitPane dividerPositions="0.43333333333333335" focusTraversable="true" prefHeight="300.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+          <children>
+            <TableView fx:id="personTable" depthTest="DISABLE" disable="false" editable="false" focusTraversable="true" mouseTransparent="false" pickOnBounds="false" prefHeight="200.0" prefWidth="200.0" tableMenuButtonVisible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columns>
+                <TableColumn prefWidth="128.0" text="First Name" />
+                <TableColumn prefWidth="128.0" resizable="true" text="Last Name" visible="true" />
+              </columns>
+            </TableView>
+          </children>
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="background">
+          <children>
+            <Label styleClass="label-header" text="Person Details:" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
+            <ButtonBar layoutX="54.0" layoutY="250.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+              <buttons>
+                <Button mnemonicParsing="false" onAction="#handleNewPerson" text="New..." />
+                <Button mnemonicParsing="false" onAction="#handleEditPerson" text="Edit..." />
+                <Button minWidth="66.0" mnemonicParsing="false" onAction="#handleDeletePerson" prefHeight="33.0" prefWidth="120.0" text="Delete" />
+              </buttons>
+            </ButtonBar>
+            <GridPane id="firstNameColumn" fx:id="birthdayLabel" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="50.0">
+              <children>
+                <Label text="First Name" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <Label text="Last Name" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <Label text="City" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <Label text="Street" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                <Label text="ZIP" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                <Label text="Birthday" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+              </children>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+            <Group id="Group" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+            <Button layoutX="58.0" layoutY="263.0" mnemonicParsing="false" text="New..." />
+            <Button layoutX="159.0" layoutY="263.0" mnemonicParsing="false" text="Edit..." />
+            <Button layoutX="243.0" layoutY="263.0" mnemonicParsing="false" onAction="#handleDeletePerson" text="Delete" />
+          </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+  </children>
+  <stylesheets>
+    <URL value="@DarkTheme.css" />
+  </stylesheets>
+</AnchorPane>
